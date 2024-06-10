@@ -1,24 +1,27 @@
+import React, { useState } from 'react'
 import './Navbar.css'
-import React from 'react'
-import {Link }  from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
-function Navbar () {
 
+const Navbar = () =>
+    {
 
+        const [click, setClick ] = useState('')
+
+        const handleClick = (link) =>{
+            setClick(link)
+        }
 
         return(
             <>
-                <nav className="navbar">
-                <Link to="/" className="nav-item"><b>Home</b></Link>
-                <Link to="/about" className="nav-item"><b>Projects</b></Link>
-                <Link to="/services" className="nav-item"><b>Music</b></Link>
-                <Link to="/contact" className="nav-item"><b>Contact</b></Link>
-                </nav>
-            
+            <nav className='navbar'>
+                <ul className='nav-list'>
+                    <li><a href='#home' className='nav-link'>Home</a></li>
+                    <li><a href='#about'className='nav-link'>About Me</a></li>
+                    <li><a href='#services'className='nav-link'>Repretiore</a></li>
+                    <li><a href='#contact'className='nav-link'>Socials</a></li>
+  
+                </ul>
+            </nav>
             </>
         )
-
-
-    
-}
-export default Navbar
+    }
+    export default Navbar
