@@ -1,28 +1,46 @@
-.navbar{
-    background-color: rgba(128, 128, 128, 0.205);
-    color: white;
-    padding: 10px 20px;
 
-  
-}
+.navbar {
+    background-color:  #081b29;
 
-.nav-list{
-
+    overflow: hidden;
     display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    
-    
-
-}
-.nav-link{
-
-    font: 20px;
+    justify-content: space-around; /* This will space out the nav items evenly */
+    width: 490px;
+    position: absolute;
+    right: 310px;
+    top: -30px;
+  
+  }
+  .nav-item 
+  {
+    display: block;
     color: white;
-    
+    text-align: center;
+    padding: 30px 26px;
+    text-decoration: none;
+    font-size: 20px;
+    /* border: 2px solid white; */
 
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+
+    font-style: normal;
+  }
+  .nav-item:hover{
+
+    color: yellow;
+
+
+  }
+
+  .bounce-hover:hover{
+    animation: bounce .9s ease;
 }
-.nav-link:hover {
-    color: #ccc;
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px)
+    }
 }
